@@ -1,122 +1,125 @@
-DESC EMPLOYEES; 
+DESC EMPLOYEES;
+
 DESC DEPARTMENTS;
 
-SELECT * 
-FROM 
- employees;
+SELECT
+   *
+FROM
+   EMPLOYEES;
 
 SELECT
-    region_id,
-    region_name
+   REGION_ID,
+   REGION_NAME
 FROM
-    regions;
-    
-SELECT
-    department_id,
-    department_name,
-    manager_id,
-    location_id
-FROM
-    departments;
-    
-SELECT 
-   employee_id, 
-   first_name, 
-   last_name, salary 
-FROM 
-   employees;
-
-SELECT 
-   department_id, 
-   department_name, 
-   manager_id 
-FROM  
-  departments;
+   REGIONS;
 
 SELECT
-    first_name, 
-    last_name, salary, 
-    salary *  2.05
+   DEPARTMENT_ID,
+   DEPARTMENT_NAME,
+   MANAGER_ID,
+   LOCATION_ID
 FROM
-   employees;
-   
+   DEPARTMENTS;
+
 SELECT
-    first_name, 
-    last_name, salary, 
-    salary + 100 *  2.05
+   EMPLOYEE_ID,
+   FIRST_NAME,
+   LAST_NAME,
+   SALARY
 FROM
-   employees;   
-   
+   EMPLOYEES;
+
 SELECT
-    first_name, 
-    last_name, salary, 
-    (salary + 100) *  2.05
+   DEPARTMENT_ID,
+   DEPARTMENT_NAME,
+   MANAGER_ID
 FROM
-   employees;  
-   
-SELECT 
-   FIRST_NAME, 
-   LAST_NAME, 
+   DEPARTMENTS;
+
+SELECT
+   FIRST_NAME,
+   LAST_NAME,
+   SALARY,
+   SALARY * 2.05
+FROM
+   EMPLOYEES;
+
+SELECT
+   FIRST_NAME,
+   LAST_NAME,
+   SALARY,
+   SALARY + 100 * 2.05
+FROM
+   EMPLOYEES;
+
+SELECT
+   FIRST_NAME,
+   LAST_NAME,
+   SALARY,
+   (SALARY + 100) * 2.05
+FROM
+   EMPLOYEES;
+
+SELECT
+   FIRST_NAME,
+   LAST_NAME,
    JOB_ID,
-   SALARY, 
-   COMMISSION_PCT, 200000 * COMMISSION_PCT
-FROM 
+   SALARY,
+   COMMISSION_PCT,
+   200000 * COMMISSION_PCT
+FROM
    EMPLOYEES
 WHERE
-   COMMISSION_PCT  IS NULL;
- 
-SELECT 
-   FIRST_NAME NOME, 
-   LAST_NAME SOBRENOME,
-   SALARY SALÁRIO
-FROM 
-  EMPLOYEES;
-  
-  SELECT 
-   FIRST_NAME  "Nome", 
-   LAST_NAME "Sobrenome",
-   SALARY "Salário",
-   COMMISSION_PCT "Percentual de comissão"
-FROM 
-  EMPLOYEES;
-  
+   COMMISSION_PCT IS NULL;
+
 SELECT
- FIRST_NAME || '  ' ||
- LAST_NAME   || ',  data de admissão:  '  ||
- HIRE_DATE  "Funcionário"
-FROM 
- EMPLOYEES;
- 
- SELECT
- FIRST_NAME || '  ' ||
- LAST_NAME   || ', salário:  '  ||
- SALARY  "Funcionário"
-FROM 
- EMPLOYEES;
- 
-SELECT 
-  DEPARTMENT_NAME || 
-  ' Department''s Manager Id: '
-  || manager_id AS "Departamento e Gerente"
+   FIRST_NAME NOME,
+   LAST_NAME  SOBRENOME,
+   SALARY     SALÁRIO
 FROM
-  DEPARTMENTS;
-
-SELECT
-  DEPARTMENT_ID
-FROM 
-  EMPLOYEES;
-
-SELECT
-  DISTINCT
-  DEPARTMENT_ID
-FROM 
-  EMPLOYEES;
-
-SELECT
-  DISTINCT
-  FIRST_NAME, LAST_NAME
-FROM 
-  EMPLOYEES;
-FIRST_NAME, LAST_NAME
-FROM 
    EMPLOYEES;
+
+SELECT
+   FIRST_NAME     "Nome",
+   LAST_NAME      "Sobrenome",
+   SALARY         "Salário",
+   COMMISSION_PCT "Percentual de comissão"
+FROM
+   EMPLOYEES;
+
+SELECT
+   FIRST_NAME || '  ' || LAST_NAME || ',  data de admissão:  ' || HIRE_DATE "Funcionário"
+FROM
+   EMPLOYEES;
+
+SELECT
+   FIRST_NAME || '  ' || LAST_NAME || ', salário:  ' || SALARY "Funcionário"
+FROM
+   EMPLOYEES;
+
+SELECT
+   DEPARTMENT_NAME || ' Department''s Manager Id: ' || MANAGER_ID AS "Departamento e Gerente"
+FROM
+   DEPARTMENTS;
+
+SELECT
+   DEPARTMENT_ID
+FROM
+   EMPLOYEES;
+
+SELECT
+   DISTINCT DEPARTMENT_ID
+FROM
+   EMPLOYEES;
+
+SELECT
+   DISTINCT FIRST_NAME,
+   LAST_NAME
+FROM
+   EMPLOYEES;
+
+FIRST_NAME, LAST_NAME
+
+FROM
+
+EMPLOYEES;
