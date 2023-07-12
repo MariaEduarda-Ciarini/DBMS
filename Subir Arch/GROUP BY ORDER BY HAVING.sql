@@ -1,0 +1,143 @@
+SELECT 
+AVG 
+        (SALARY), 
+SUM
+        (SALARY)
+FROM 
+        EMPLOYEES;
+
+
+SELECT 
+MIN
+        (HIRE_DATE), 
+MAX
+        (HIRE_DATE)
+FROM 
+        EMPLOYEES;
+        
+      
+SELECT 
+MIN
+        (SALARY), 
+MAX
+        (SALARY)
+FROM
+       EMPLOYEES;
+        
+
+SELECT
+COUNT(*)
+FROM
+      EMPLOYEES;   
+      
+    
+SELECT 
+COUNT   (COMMISSION_PCT), 
+COUNT   (*)
+FROM
+      EMPLOYEES;   
+     
+     
+SELECT 
+COUNT  (NVL(COMMISSION_PCT,0))
+FROM 
+     EMPLOYEES;     
+     
+     
+SELECT 
+COUNT(DISTINCT department_id)
+FROM 
+     EMPLOYEES;     
+     
+     
+SELECT 
+COUNT(DEPARTMENT_ID)
+FROM 
+     EMPLOYEES;     
+     
+     
+SELECT 
+AVG(COMMISSION_PCT)
+FROM 
+    EMPLOYEES;     
+   
+
+SELECT 
+AVG(NVL(COMMISSION_PCT, 0))
+FROM 
+    EMPLOYEES;  
+    
+SELECT 
+      DEPARTMENT_ID, 
+AVG
+     (SALARY)
+FROM 
+     EMPLOYEES
+GROUP BY 
+     DEPARTMENT_ID; 
+     
+     
+SELECT 
+      DEPARTMENT_ID, 
+      JOB_ID, 
+SUM
+      (SALARY)
+FROM 
+     EMPLOYEES
+GROUP BY 
+     DEPARTMENT_ID, 
+     JOB_ID
+ORDER BY 
+     DEPARTMENT_ID, 
+     JOB_ID;    
+     
+
+SELECT 
+     DEPARTMENT_ID,
+AVG
+    (SALARY)
+FROM 
+    EMPLOYEES
+GROUP BY 
+    DEPARTMENT_ID;   
+    
+
+SELECT 
+    DEPARTMENT_ID, 
+MAX
+   (SALARY)
+FROM 
+   EMPLOYEES
+GROUP BY 
+   DEPARTMENT_ID
+HAVING MAX 
+   (SALARY)>10000;    
+   
+ 
+SELECT 
+     JOB_ID, 
+SUM
+    (SALARY) TOTAL
+FROM 
+     EMPLOYEES
+WHERE 
+     JOB_ID <> 'SA_REP'
+GROUP BY 
+     JOB_ID
+HAVING SUM
+    (SALARY) > 10000
+ORDER BY SUM 
+    (SALARY);
+    
+    
+SELECT MAX(AVG(SALARY))
+FROM EMPLOYEES
+GROUP BY DEPARTMENT_ID;
+
+SELECT 
+AVG
+    (SALARY)
+FROM 
+    EMPLOYEES
+GROUP BY 
+    DEPARTMENT_ID;   
