@@ -1,20 +1,23 @@
--- Bloco Anônimo 
+-- Bloco Anônimo
 SET SERVEROUTPUT ON
 
 DECLARE
-    vTexto   VARCHAR2(100) := 'Seja bem vindos ao Procedural Language/SQL';
+    VTEXTO VARCHAR2(100) := 'Seja bem vindos ao Procedural Language/SQL';
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(vTexto);
+    DBMS_OUTPUT.PUT_LINE(VTEXTO);
 EXCEPTION
     WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Erro Oracle: ' || SQLCODE || ' ' || SQLERRM);
+        DBMS_OUTPUT.PUT_LINE('Erro Oracle: '
+            || SQLCODE
+            || ' '
+            || SQLERRM);
 END;
-
 DECLARE
-    vNumero1 NUMBER(11, 2) := 500;
-    vNumero2 NUMBER(11, 2) := 450;
-    vMedia   NUMBER (11, 2);
+    VNUMERO1 NUMBER(11, 2) := 500;
+    VNUMERO2 NUMBER(11, 2) := 450;
+    VMEDIA   NUMBER (11, 2);
 BEGIN
-    vMedia := (vNumero1  + vNumero2) / 2;
-    DBMS_OUTPUT.PUT_LINE('Media = ' || vMedia);
+    VMEDIA := (VNUMERO1 + VNUMERO2) / 2;
+    DBMS_OUTPUT.PUT_LINE('Media = '
+        || VMEDIA);
 END;
