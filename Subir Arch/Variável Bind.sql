@@ -3,18 +3,19 @@
 -- Variável Bind
 
 SET SERVEROUTPUT ON
-VARIABLE gmedia NUMBER
+
+VARIABLE GMEDIA NUMBER
+
 DECLARE
-    vnumero1 NUMBER(11, 2) := 2430;
-    vnumero2 NUMBER(11, 2) := 7500;
+    VNUMERO1 NUMBER(11, 2) := 2430;
+    VNUMERO2 NUMBER(11, 2) := 7500;
 BEGIN
-    :gmedia := (vnumero1 + vnumero2) / 2;
+    :GMEDIA := (VNUMERO1 + VNUMERO2) / 2;
     DBMS_OUTPUT.PUT_LINE(' Média = '
-    || TO_CHAR(:gmedia));
+        || TO_CHAR(:GMEDIA));
 EXCEPTION
-    WHEN OTHERS
-      THEN
-       DBMS_OUTPUT.PUT_LINE('Erro Oracle:' 
-       || SQLCODE
-       || SQLERRM);
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Erro Oracle:'
+            || SQLCODE
+            || SQLERRM);
 END;
