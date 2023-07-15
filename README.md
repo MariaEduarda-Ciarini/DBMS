@@ -1,3 +1,1 @@
-# Oracle PL/SQL
-# MySQL pegando a base do BD
-A mess that only. Just
+# Estudando banco de dados Oracle SQL/PLSQL <br> e MySQL
