@@ -1,3 +1,2 @@
-# Estudando banco de dados Oracle SQL/PLSQL <br> 
-# e MySQL..<br>
-## https://www.udemy.com/
+# Aprendendo Banco de Dados Oracle SQL/PLSQL <br> e MySQL..<br>
+## https://www.udemy.com/ <br> https://www.alura.com.br/
