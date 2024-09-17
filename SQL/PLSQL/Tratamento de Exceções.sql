@@ -1,4 +1,3 @@
--- Seção 13 - Tratamento de Exceções
 -- Aula 1 - Tratamento de Exceções
 
 -- Tratamento de Exceções Pré-definidas Oracle
