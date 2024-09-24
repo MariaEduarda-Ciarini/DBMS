@@ -1,0 +1,23 @@
+-- Desabilitando Database DML Triggers
+
+ALTER TRIGGER B_IUD_VALIDA_HORARIO_EMPLOYEES_S_TRG DISABLE;
+
+-- Habilitando Database DML Triggers
+
+ALTER TRIGGER B_IUD_VALIDA_HORARIO_EMPLOYEES_S_TRG ENABLE;
+
+-- Desabilitando todas Database DML Triggers da tabela employees
+
+ALTER TABLE EMPLOYEES DISABLE ALL TRIGGERS;
+
+ALTER TABLE EMPLOYEES ENABLE ALL TRIGGERS;
+
+
+-- Consultando Database DML Triggers pelo Dicinario de Dados
+
+SELECT * FROM USER_TRIGGERS
+WHERE TABLE_NAME = 'EMPLOYEES' AND TABLE_OWNER = 'HR';
+
+-- Removendo uma Database DML Trigger
+
+DROP TRIGGER B_IUD_VALIDA_HORARIO_EMPLOYEES_S_TRG;
